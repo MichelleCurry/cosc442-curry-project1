@@ -4,12 +4,12 @@ public class GameBoardFull extends GameBoard {
     public GameBoardFull() {
         super();
         PropertyCell dp1 = new PropertyCell();
-        CardCell cc1 = new CardCell(Card.TYPE_CC, "Community Chest 1");
+        Cell cc1 = new CardCell(Card.TYPE_CC, "Community Chest 1");
         PropertyCell dp2 = new PropertyCell();
         PropertyCell dp3 = new PropertyCell();
         RailRoadCell rr1 = new RailRoadCell();
         PropertyCell lb1 = new PropertyCell();
-        CardCell c1 = new CardCell(Card.TYPE_CHANCE, "Chance 1");
+        Cell c1 = new CardCell(Card.TYPE_CHANCE, "Chance 1");
         PropertyCell lb2 = new PropertyCell();
         PropertyCell lb3 = new PropertyCell();
         JailCell jail = new JailCell();
@@ -19,12 +19,12 @@ public class GameBoardFull extends GameBoard {
         PropertyCell p3 = new PropertyCell();
         RailRoadCell rr2 = new RailRoadCell();
         PropertyCell o1 = new PropertyCell();
-        CardCell cc2 = new CardCell(Card.TYPE_CC, "Community Chest 2");
+        Cell cc2 = new CardCell(Card.TYPE_CC, "Community Chest 2");
         PropertyCell o2 = new PropertyCell();
         PropertyCell o3 = new PropertyCell();
         FreeParkingCell fp = new FreeParkingCell();
         PropertyCell r1 = new PropertyCell();
-        CardCell c2 = new CardCell(Card.TYPE_CHANCE, "Chance 2");
+        Cell c2 = new CardCell(Card.TYPE_CHANCE, "Chance 2");
         PropertyCell r2 = new PropertyCell();
         PropertyCell r3 = new PropertyCell();
         RailRoadCell rr3 = new RailRoadCell();
@@ -35,10 +35,10 @@ public class GameBoardFull extends GameBoard {
         GoToJailCell goToJail = new GoToJailCell();
         PropertyCell g1 = new PropertyCell();
         PropertyCell g2 = new PropertyCell();
-        CardCell cc3 = new CardCell(Card.TYPE_CC, "Community Chest 3");
+        Cell cc3 = new CardCell(Card.TYPE_CC, "Community Chest 3");
         PropertyCell g3 = new PropertyCell();
         RailRoadCell rr4 = new RailRoadCell();
-        CardCell c3 = new CardCell(Card.TYPE_CHANCE, "Chance 3");
+        Cell c3 = new CardCell(Card.TYPE_CHANCE, "Chance 3");
         PropertyCell db1 = new PropertyCell();
         PropertyCell db2 = new PropertyCell();
         PropertyCell db3 = new PropertyCell();
