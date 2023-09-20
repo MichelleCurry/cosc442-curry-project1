@@ -18,15 +18,15 @@ public class RailRoadCell extends Cell {
 	}
 
 	public int getRent() {
-		return RailRoadCell.baseRent * (int)Math.pow(2, owner.numberOfRR() - 1);
+		return RailRoadCell.baseRent * (int)Math.pow(2, theOwner.numberOfRR() - 1);
 	}
 	
 	public void playAction() {
 		Player currentPlayer = null;
 		if(!isAvailable()) {
 			currentPlayer = GameMaster.instance().getCurrentPlayer();
-			if(owner != currentPlayer) {
-				currentPlayer.payRentTo(owner, getRent());
+			if(theOwner != currentPlayer) {
+				currentPlayer.payRentTo(theOwner, getRent());
 			}
 		}
 	}
