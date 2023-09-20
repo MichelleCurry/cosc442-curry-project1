@@ -50,7 +50,7 @@ public class GameMaster {
 
     public void btnEndTurnClicked() {
 		setAllButtonEnabled(false);
-		getCurrentPlayer().getPosition().playAction();
+		getCurrentPlayer().getPosition().playAction(null);
 		if(getCurrentPlayer().isBankrupt()) {
 			gui.setBuyHouseEnabled(false);
 			gui.setDrawCardEnabled(false);

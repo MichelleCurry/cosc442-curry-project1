@@ -31,7 +31,7 @@ public class UtilityCellTest extends TestCase {
 		gameMaster.getPlayer(0).purchase();
 		gameMaster.switchTurn();
 		gameMaster.movePlayer(1, cellIndex);
-		cell.playAction();
+		cell.playAction(null);
 		int diceRoll = gameMaster.getUtilDiceRoll();
 		assertEquals(
 				1500 - cell.getRent(diceRoll),
