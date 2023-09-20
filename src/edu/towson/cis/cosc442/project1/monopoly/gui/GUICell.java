@@ -11,11 +11,11 @@ public class GUICell extends JPanel {
 
 	
 	private static final long serialVersionUID = 1L;
-	private Cell cell;
+	private IOwnable cell;
 	private JLabel lblInfo;
 	private JLabel[] lblPlayers = new JLabel[GameMaster.MAX_PLAYER];
 	
-    public GUICell(Cell cell) {
+    public GUICell(IOwnable cell) {
         this.cell = cell;
         setLayout(new OverlayLayout(this));
         setBorder(new BevelBorder(BevelBorder.LOWERED));
@@ -58,7 +58,7 @@ public class GUICell extends JPanel {
 		this.repaint();
 	}
 
-	public Cell getCell() {
+	public IOwnable getCell() {
 		return cell;
 	}
 	

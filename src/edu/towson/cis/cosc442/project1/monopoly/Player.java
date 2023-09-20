@@ -12,7 +12,7 @@ public class Player {
 	private int money;
 	private String name;
 
-	private Cell position;
+	private IOwnable position;
 	private ArrayList<PropertyCell> properties = new ArrayList<PropertyCell>();
 	private ArrayList<Cell> railroads = new ArrayList<Cell>();
 	private ArrayList<Cell> utilities = new ArrayList<Cell>();
@@ -55,7 +55,7 @@ public class Player {
 
 	public boolean checkProperty(String property) {
 		for(int i=0;i<properties.size();i++) {
-			Cell cell = (Cell)properties.get(i);
+			IOwnable cell = (IOwnable)properties.get(i);
 			if(cell.getName().equals(property)) {
 				return true;
 			}
@@ -82,12 +82,12 @@ public class Player {
 		properties.clear();
 	}
     
-    public Cell[] getAllProperties() {
+    public IOwnable[] getAllProperties() {
         ArrayList<Cell> list = new ArrayList<Cell>();
         list.addAll(properties);
         list.addAll(utilities);
         list.addAll(railroads);
-        return (Cell[])list.toArray(new Cell[list.size()]);
+        return (IOwnable[])list.toArray(new Cell[list.size()]);
     }
 
 	public int getMoney() {
@@ -124,7 +124,7 @@ public class Player {
 		GameMaster.instance().updateGUI();
 	}
 
-	public Cell getPosition() {
+	public IOwnable getPosition() {
 		return this.position;
 	}
 	
@@ -177,7 +177,7 @@ public class Player {
 	
 	public void purchase() {
 		if(getPosition().isAvailable()) {
-			Cell c = getPosition();
+			IOwnable c = getPosition();
 			c.setAvailable(false);
 			if(c instanceof PropertyCell) {
 				PropertyCell cell = (PropertyCell)c;
@@ -221,7 +221,7 @@ public class Player {
 	    buyProperty(cell, cell.getPrice());
 	}
 
-    public void sellProperty(Cell property, int amount) {
+    public void sellProperty(IOwnable property, int amount) {
         property.setOwner(null);
         if(property instanceof PropertyCell) {
             properties.remove(property);
@@ -247,7 +247,7 @@ public class Player {
 		this.name = name;
 	}
 
-	public void setPosition(Cell newPosition) {
+	public void setPosition(IOwnable newPosition) {
 		this.position = newPosition;
 	}
 

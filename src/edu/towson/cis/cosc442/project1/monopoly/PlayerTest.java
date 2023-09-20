@@ -30,7 +30,7 @@ public class PlayerTest extends TestCase {
 		GameBoard gameboard = gameMaster.getGameBoard();
 		Player player1 = new Player();
 		Player player2 = new Player();
-		Cell go = gameboard.queryCell("Go");
+		IOwnable go = gameboard.queryCell("Go");
 		assertSame(go, player1.getPosition());
 		assertSame(go, player2.getPosition());
 	}
