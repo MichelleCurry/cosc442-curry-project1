@@ -17,7 +17,8 @@ import edu.towson.cis.cosc442.project1.monopoly.*;
 
 public class PlayerPanel extends JPanel {
 
-    /**
+    private PlayerPanelProduct playerPanelProduct = new PlayerPanelProduct();
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -27,8 +28,6 @@ public class PlayerPanel extends JPanel {
     private JButton btnGetOutOfJail;
     private JButton btnPurchaseProperty;
     private JButton btnRollDice;
-    private JButton btnTrade;
-    
     private JLabel lblMoney;
     private JLabel lblName;
     
@@ -45,7 +44,7 @@ public class PlayerPanel extends JPanel {
         btnBuyHouse = new JButton("Buy House");
         btnGetOutOfJail = new JButton("Get Out of Jail");
         btnDrawCard = new JButton("Draw Card");
-        btnTrade = new JButton("Trade");
+        playerPanelProduct.setBtnTrade(new JButton("Trade"));
         this.player = player;
         lblName = new JLabel();
         lblMoney = new JLabel();
@@ -73,7 +72,7 @@ public class PlayerPanel extends JPanel {
         pnlAction.add(btnGetOutOfJail);
         pnlAction.add(btnEndTurn);
         pnlAction.add(btnDrawCard);
-        pnlAction.add(btnTrade);
+        pnlAction.add(playerPanelProduct.getBtnTrade());
 
         pnlAction.doLayout();
         pnlInfo.doLayout();
@@ -91,7 +90,7 @@ public class PlayerPanel extends JPanel {
         btnBuyHouse.setEnabled(false);
         btnGetOutOfJail.setEnabled(false);
         btnDrawCard.setEnabled(false);
-        btnTrade.setEnabled(false);
+        playerPanelProduct.getBtnTrade().setEnabled(false);
 
         setBorder(new BevelBorder(BevelBorder.RAISED));
 
@@ -134,7 +133,7 @@ public class PlayerPanel extends JPanel {
             }
         });
 
-        btnTrade.addActionListener(new ActionListener() {
+        playerPanelProduct.getBtnTrade().addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GameMaster.instance().btnTradeClicked();
             }
@@ -177,7 +176,7 @@ public class PlayerPanel extends JPanel {
     }
 
     public boolean isTradeButtonEnabled() {
-        return btnTrade.isEnabled();
+        return playerPanelProduct.isTradeButtonEnabled();
     }
 
     public void setBuyHouseEnabled(boolean b) {
@@ -205,6 +204,6 @@ public class PlayerPanel extends JPanel {
     }
 
     public void setTradeEnabled(boolean b) {
-        btnTrade.setEnabled(b);
+        playerPanelProduct.setTradeEnabled(b);
     }
 }
