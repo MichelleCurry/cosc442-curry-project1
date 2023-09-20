@@ -2,9 +2,18 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 import junit.framework.TestCase;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RailRoadCellTest.
+ */
 public class RailRoadCellTest extends TestCase {
+	
+	/** The game master. */
 	GameMaster gameMaster;
 	
+	/**
+	 * Sets the up.
+	 */
 	protected void setUp() {
 		gameMaster = GameMaster.instance();
 		gameMaster.setGameBoard(new GameBoardRailRoad());
@@ -13,6 +22,9 @@ public class RailRoadCellTest extends TestCase {
 		gameMaster.setGUI(new MockGUI());
 	}
 	
+	/**
+	 * Test player action.
+	 */
 	public void testPlayerAction() {
 		RailRoadCell cell =
 			(RailRoadCell) gameMaster.getGameBoard().queryCell("Railroad A");
@@ -30,6 +42,9 @@ public class RailRoadCellTest extends TestCase {
 				gameMaster.getPlayer(0).getMoney());
 	}
 	
+	/**
+	 * Test purchase railroad.
+	 */
 	public void testPurchaseRailroad() {
 		assertEquals(0, gameMaster.getPlayer(0).numberOfRR());
 		int cellIndex = gameMaster.getGameBoard().queryCellIndex("Railroad A");
@@ -39,6 +54,9 @@ public class RailRoadCellTest extends TestCase {
 		assertEquals(1, gameMaster.getPlayer(0).numberOfRR());
 	}
 
+	/**
+	 * Test rent.
+	 */
 	public void testRent() {
 		RailRoadCell rr1 =
 			(RailRoadCell) gameMaster.getGameBoard().queryCell("Railroad A");

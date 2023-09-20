@@ -1,7 +1,15 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GameBoardCCMovePlayer.
+ */
 public class GameBoardCCMovePlayer extends GameBoard {
+    
+    /**
+     * Instantiates a new game board CC move player.
+     */
     public GameBoardCCMovePlayer() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

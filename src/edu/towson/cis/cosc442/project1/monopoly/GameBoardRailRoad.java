@@ -1,6 +1,14 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GameBoardRailRoad.
+ */
 public class GameBoardRailRoad extends GameBoard {
+	
+	/**
+	 * Instantiates a new game board rail road.
+	 */
 	public GameBoardRailRoad() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

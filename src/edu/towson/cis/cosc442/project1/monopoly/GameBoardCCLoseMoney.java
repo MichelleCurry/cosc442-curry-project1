@@ -1,7 +1,15 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GameBoardCCLoseMoney.
+ */
 public class GameBoardCCLoseMoney extends GameBoard {
+    
+    /**
+     * Instantiates a new game board CC lose money.
+     */
     public GameBoardCCLoseMoney() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

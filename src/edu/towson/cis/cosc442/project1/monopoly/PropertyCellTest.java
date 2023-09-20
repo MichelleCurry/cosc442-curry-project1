@@ -3,10 +3,18 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 import junit.framework.TestCase;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PropertyCellTest.
+ */
 public class PropertyCellTest extends TestCase {
 
+	/** The game master. */
 	GameMaster gameMaster;
 	
+	/**
+	 * Sets the up.
+	 */
 	protected void setUp() {
 		gameMaster = GameMaster.instance();
 		gameMaster.setGameBoard(new SimpleGameBoard());
@@ -15,6 +23,9 @@ public class PropertyCellTest extends TestCase {
 		gameMaster.setGUI(new MockGUI());
 	}
 	
+	/**
+	 * Test player action.
+	 */
 	public void testPlayerAction() {
 		PropertyCell cell =
 			(PropertyCell) gameMaster.getGameBoard().queryCell("Blue 3");

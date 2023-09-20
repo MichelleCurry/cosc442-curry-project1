@@ -1,6 +1,14 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GameBoardFull.
+ */
 public class GameBoardFull extends GameBoard {
+    
+    /**
+     * Instantiates a new game board full.
+     */
     public GameBoardFull() {
         super();
         PropertyCell dp1 = new PropertyCell();

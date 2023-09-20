@@ -2,8 +2,15 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 import junit.framework.TestCase;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TradeDealTest.
+ */
 public class TradeDealTest extends TestCase {
     
+    /**
+     * Sets the up.
+     */
     public void setUp() {
         GameMaster gameMaster = GameMaster.instance();
         gameMaster.reset();
@@ -12,6 +19,9 @@ public class TradeDealTest extends TestCase {
         gameMaster.getPlayer(1).setName("Seller");
     }
 
+    /**
+     * Test make message.
+     */
     public void testMakeMessage() {
         TradeDeal deal = new TradeDeal();
         deal.setAmount(200);

@@ -1,7 +1,15 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GameBoard14.
+ */
 public class GameBoard14 extends GameBoard {
+	
+	/**
+	 * Instantiates a new game board 14.
+	 */
 	public GameBoard14() {
 		super();
 		PropertyCell blue1 = new PropertyCell();
