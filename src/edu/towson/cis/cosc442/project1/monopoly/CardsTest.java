@@ -2,6 +2,7 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 import junit.framework.TestCase;
 
+//Task 7 junit tests
 public class CardsTest extends TestCase {
     Card ccCard, chanceCard;
     
